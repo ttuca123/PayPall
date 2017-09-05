@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                          * For sample mobile backend interactions, see
                          * https://github.com/paypal/rest-api-sdk-python/tree/master/samples/mobile_backend
                          */
-                        displayResultText("PaymentConfirmation info received from PayPal");
+                        displayResultText("Pagamento foi confirmado pelo PayPall");
 
 
                     } catch (JSONException e) {
@@ -204,7 +204,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             } else if (resultCode == Activity.RESULT_CANCELED) {
-                Log.i(TAG, "The user canceled.");
+                Toast.makeText(
+                        getApplicationContext(),
+                        "O usuário cancelou o pagamento", Toast.LENGTH_LONG)
+                        .show();
             } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
                 Log.i(
                         TAG,
