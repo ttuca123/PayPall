@@ -14,6 +14,13 @@
         android:layout_centerVertical="true"
         android:orientation="vertical" >
 
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onBuyPressed"
+            app:srcCompat="@drawable/botao_paypall2" />
+
         <Button
             android:id="@+id/buyItBtn"
             android:layout_width="match_parent"

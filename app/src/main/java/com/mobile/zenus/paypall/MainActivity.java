@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Exemplo de pagamento";
     private static final String MOEDA = "BRL";
 
-    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_NO_NETWORK;
+    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_SANDBOX;
 
     // note that these credentials will differ between live & sandbox environments.
-    private static final String CONFIG_CLIENT_ID = "AFcWxV21C7fd0v3bYYYRCpSSRl31AA2BULN5d7UKZJ.ewjr-ch3Kjzbw";
+    private static final String CONFIG_CLIENT_ID = "ATpNNscTzeJuSZAh3UevRegcb9pBidVRsrJMkDyljxlfTXqRBs-XltQKmOIys4guFXQfZDl8vhndErGx";
 
     private static final int REQUEST_CODE_PAYMENT = 1;
     private static final int REQUEST_CODE_FUTURE_PAYMENT = 2;
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
             .environment(CONFIG_ENVIRONMENT)
             .clientId(CONFIG_CLIENT_ID)
             // The following are only used in PayPalFuturePaymentActivity.
-            .merchantName("Exemplo de Pagamento");
-//            .merchantPrivacyPolicyUri(Uri.parse("https://www.example.com/privacy"))
-//            .merchantUserAgreementUri(Uri.parse("https://www.example.com/legal")
-//            );
+            .merchantName("Exemplo de Pagamento")
+            .merchantPrivacyPolicyUri(Uri.parse("https://www.example.com/privacy"))
+            .merchantUserAgreementUri(Uri.parse("https://www.example.com/legal")
+            );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
